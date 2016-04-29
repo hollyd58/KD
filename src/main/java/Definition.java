@@ -1,15 +1,18 @@
 import java.util.ArrayList;
 
 
-public class ClassApp{
-  private String mVariable;
-  private Integer mIntVar;
-  private static ArrayList<ClassApp> classApp = new ArrayList<ClassApp>();
+public class Definition{
+  private String mDefinition;
+  private int mId;
+  private static ArrayList<Definition> theDefinitions = new ArrayList<Definition>();
 
-  public ConstructorApp(String variable){
-    mVariable = variable;
+  public Definition(String mDefinition){
+  //   mVariable = variable;
+  //
+  // public String getVariable()
+  //   return mVariable;
   }
-  public String getVariable(){
-    return mVariable;
-  }
+    public static ArrayList<Definition> all(){
+      return theDefinitions;
+    }
 }
