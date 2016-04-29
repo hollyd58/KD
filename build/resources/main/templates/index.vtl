@@ -1,5 +1,14 @@
-<h1>Here's a Title!</h1>
+<h1>nuqneH! Heghlu'meH QaQ jajvam!</h1>
+<h3>nuqDaq'oH puchpa"e'</h3>
+</br>
 
-<a href="/categories">View Category List</a>
-<a href="/categories/new">Add new categories!</a>
-<a href="/tasks/new">Add a new task</a>
+<h1>Your Words:</h1>
+</br>
+<ul>
+#foreach($word in $words)
+  <li><a href = "/index/$word.getId()">$word.getWord()</a></h3></li>
+</ul>
+#end
+
+<a href = "/index/new">Keep building your Klingon dictionary here</a>
+<a href="/definitions/new">Add a Definition</a>

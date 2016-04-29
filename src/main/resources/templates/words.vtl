@@ -1,7 +1,7 @@
-<h1>All Tasks</h1>
+<h1>Your Words</h1>
 <ul>
-  #foreach ($task in $tasks)
-    <a href="/tasks/$task.getId()">$task.getDescription()</a>
-  #end
+  #foreach ($word in $words)
+    <li><a href="/words/$word.getId()">$word.getName()</a>    </li>
+    #end
 </ul>
-<a href = "/tasks/new"> Add New Tasks</a>
+<a href="/words/new">Add Another Word</a>
