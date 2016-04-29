@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Word {
   private static ArrayList<Word> theWords = new ArrayList<Word>();
+  private ArrayList<Definition> mDefinition;
   private String mWord;
   private int mId;
 
@@ -9,6 +10,7 @@ public class Word {
     mWord = word;
     mId = theWords.size();
     theWords.add(this);
+    mDefinition = new ArrayList<Definition>();
   }
 
   public String getWord() {
@@ -29,6 +31,14 @@ public class Word {
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
+  }
+
+  public ArrayList<Definition> getDefinition() {
+    return mDefinition;
+  }
+
+  public void addDefinition(Definition definition) {
+    mDefinition.add(definition);
   }
 
   public static void clear() {
