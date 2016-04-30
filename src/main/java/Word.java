@@ -27,7 +27,7 @@ public class Word {
 
   public static Word find(int id) {
     try {
-      return theWords.get(id);
+      return theWords.get(id - 1);
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
